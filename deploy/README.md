@@ -86,7 +86,7 @@ sudo nginx -t && sudo systemctl reload nginx
 
 서버 폴더와 secrets 준비 후 저장소의 `main`에 홈페이지와 워크플로를 올립니다.
 GitHub Actions의 `CD - Deploy` 실행 결과를 확인합니다. 수동 실행도 `main`에서 가능합니다.
-`index.html`, `styles.css`, `assets/`만 전송하며 README, Nginx 설정, `.git`은 공개 폴더에 전송하지 않습니다.
+`index.html`, `styles.css`, `robots.txt`, `sitemap.xml`, `assets/`를 전송하며 README, Nginx 설정, `.git`은 공개 폴더에 전송하지 않습니다.
 
 ```sh
 curl -I http://weekly-lab.com/
