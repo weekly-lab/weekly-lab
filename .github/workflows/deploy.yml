@@ -8,6 +8,7 @@ on:
       - 'styles.css'
       - 'robots.txt'
       - 'sitemap.xml'
+      - 'llms.txt'
       - 'assets/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
@@ -43,6 +44,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           fingerprint: ${{ secrets.SSH_FINGERPRINT }}
-          source: 'index.html,styles.css,robots.txt,sitemap.xml,assets'
+          source: 'index.html,styles.css,robots.txt,sitemap.xml,llms.txt,assets'
           target: /usr/share/nginx/weekly-lab
           overwrite: true

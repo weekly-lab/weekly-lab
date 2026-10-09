@@ -86,7 +86,7 @@ sudo nginx -t && sudo systemctl reload nginx
 
 서버 폴더와 secrets 준비 후 저장소의 `main`에 홈페이지와 워크플로를 올립니다.
 GitHub Actions의 `CD - Deploy` 실행 결과를 확인합니다. 수동 실행도 `main`에서 가능합니다.
-`index.html`, `styles.css`, `robots.txt`, `sitemap.xml`, `assets/`를 전송하며 README, Nginx 설정, `.git`은 공개 폴더에 전송하지 않습니다.
+`index.html`, `styles.css`, `robots.txt`, `sitemap.xml`, `llms.txt`, `assets/`를 전송하며 README, Nginx 설정, `.git`은 공개 폴더에 전송하지 않습니다.
 
 ```sh
 curl -I http://weekly-lab.com/
@@ -129,6 +129,7 @@ sudo certbot renew --cert-name weekly-lab.com --dry-run
 ```sh
 curl -I https://weekly-lab.com/
 curl -I https://weekly-lab.com/styles.css
+curl -I https://weekly-lab.com/llms.txt
 curl -I 'https://www.weekly-lab.com/?from=www'
 curl -I http://weekly-lab.com/
 curl -I http://www.weekly-lab.com/
@@ -137,6 +138,7 @@ curl -I https://weekly-school.site/
 ```
 
 기본 주소는 200, www와 HTTP는 기본 HTTPS 주소로 301, 없는 파일은 404여야 합니다.
+`llms.txt`는 200과 `Content-Type: text/plain`으로 제공하고, 본문이 저장소의 UTF-8 파일과 같은지 확인합니다.
 www 요청의 `Location`에는 `?from=www`가 유지되어야 합니다.
 HTML/CSS/이미지는 `Cache-Control: no-cache`로 변경 여부를 재검증합니다.
 고정 파일명에 위클리스쿨의 `1y, immutable` 정책을 복사하지 않습니다.

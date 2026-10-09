@@ -23,6 +23,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 |---|---|
 | `index.html` | 홈페이지 콘텐츠와 상담 링크 |
 | `styles.css` | 스타일과 반응형 레이아웃 |
+| `llms.txt` | AI 도구를 위한 공개 서비스 요약과 상세 링크 |
 | `assets/` | 로고와 서비스 소개 이미지 |
 | `.github/workflows/deploy.yml` | 정적 파일 자동 배포 |
 | `deploy/nginx/` | Nginx 설정 예시 |
@@ -36,3 +37,5 @@ DNS, 인증서와 Nginx 설정은 서버에서 별도로 관리합니다.
 
 - [서버 설정과 배포 안내](deploy/README.md)
 - [디자인 기준과 콘텐츠 작성 범위](docs/website.md)
+- [SEO 관리](docs/seo.md)
+- [GEO 관리와 성과 기록](docs/geo.md)

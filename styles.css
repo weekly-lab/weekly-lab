@@ -89,6 +89,11 @@ h2 { font-size: clamp(28px, 3vw, 40px); line-height: 1.45; letter-spacing: -1.5p
 .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 32px; margin: 0; padding: 0; list-style: none; }
 .process h3 { font-size: 18px; }
 .process-note { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { padding: 20px 4px; border-bottom: 1px solid var(--line); }
+.faq-list summary { cursor: pointer; font-size: 16px; font-weight: 600; line-height: 1.7; }
+.faq-list summary::marker { color: var(--primary); }
+.faq-list details p { max-width: 800px; margin-top: 12px; color: var(--muted); font-size: 14px; }
 .closing { background: var(--primary); color: var(--paper); text-align: center; }
 .closing-inner { padding-block: 46px 52px; }
 .closing-spark { display: block; color: var(--accent); font-size: 45px; line-height: 1; margin-bottom: 18px; }
