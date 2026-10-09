@@ -138,7 +138,8 @@ curl -I https://weekly-school.site/
 ```
 
 기본 주소는 200, www와 HTTP는 기본 HTTPS 주소로 301, 없는 파일은 404여야 합니다.
-`llms.txt`는 200과 `Content-Type: text/plain`으로 제공하고, 본문이 저장소의 UTF-8 파일과 같은지 확인합니다.
+`llms.txt`는 200과 `Content-Type: text/plain; charset=utf-8`로 제공하고, 본문이 저장소의 UTF-8 파일과 같은지 확인합니다.
+파일이 UTF-8이어도 문자셋 헤더를 생략하면 브라우저가 다른 인코딩으로 읽을 수 있습니다. Nginx 예시의 `location = /llms.txt`에 `charset utf-8`을 지정합니다.
 www 요청의 `Location`에는 `?from=www`가 유지되어야 합니다.
 HTML/CSS/이미지는 `Cache-Control: no-cache`로 변경 여부를 재검증합니다.
 고정 파일명에 위클리스쿨의 `1y, immutable` 정책을 복사하지 않습니다.
