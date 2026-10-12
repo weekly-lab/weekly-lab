@@ -6,7 +6,7 @@ GEO(Generative Engine Optimization)는 AI 검색에서 위클리랩이 발견되
 ## 콘텐츠와 llms.txt
 
 - `index.html#faq`에서 준비 자료, 견적과 일정, 운영 비용, 기존 시스템 개선과 유지보수를 안내한다. JavaScript 없이 읽고 펼칠 수 있다.
-- 사례는 기존 공개 자료에서 확인한 문제와 구현 기능을 설명한다. 홈페이지와 콘텐츠 관리 사례는 구축 진행 상태를 유지한다.
+- 사례는 기존 공개 자료에서 확인한 문제와 구현 기능을 설명한다. 직장 경험과 외주 경험을 나누지 않고, 요구를 이해하고 해결한 과정과 개발 경험을 분야별로 소개한다.
 - `llms.txt`는 공개 서비스 요약과 본문 링크를 제공한다. 홈페이지의 `rel="describedby"` 링크로 찾을 수 있다.
 - 파일은 [llms.txt 제안](https://llmstxt.org/)의 제목, 요약, 설명, 링크 목록 형식을 따른다. 현재 사이트는 정적 HTML이므로 별도 Markdown 본문 사본은 만들지 않는다.
 - `llms.txt`를 사용하는 도구의 읽기를 돕는 용도다. Google은 이 파일을 검색 노출과 순위에 사용하지 않는다고 [안내한다](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide).
